@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WEAZEL NEWS LIVE</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sky"><div class="beam b1"></div><div class="beam b2"></div><div class="skyline"></div></div>
+
+<header id="top">
+  <div class="left">
+    <span class="live">● LIVE FROM LEONIDA</span>
+    <div class="globe" title="Weazel News"><span>WN</span></div>
+    <button id="muteBtn" class="btn yellow">🔇 UNMUTE WEAZEL AUDIO</button>
+  </div>
+  <div class="mid">
+    <button id="copyCA" class="pill">COPY CA</button>
+    <button id="addWallet" class="pill">ADD TO WALLET</button>
+    <a id="bridgeLink" class="pill" target="_blank" rel="noopener">BRIDGE ETH</a>
+    <a id="buyTop" class="pill red" target="_blank" rel="noopener">BUY</a>
+    <a id="tgLink" class="pill" target="_blank" rel="noopener">TG</a>
+    <a id="xLink" class="pill" target="_blank" rel="noopener">X</a>
+  </div>
+  <div class="right"><div class="wl">WANTED LEVEL</div><div id="stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div></div>
+</header>
+
+<main>
+  <section id="tv">
+    <div id="screen">
+      <svg id="fallback" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
+        <rect width="640" height="360" fill="#0A1128"/>
+        <rect y="0" width="640" height="200" fill="#12204a"/>
+        <circle class="orb" cx="320" cy="100" r="46" fill="none" stroke="#D90429" stroke-width="6"/>
+        <text x="320" y="112" text-anchor="middle" font-family="Bebas Neue" font-size="40" fill="#fff">WEAZEL</text>
+        <rect x="140" y="240" width="360" height="90" rx="6" fill="#D90429"/>
+        <rect x="140" y="240" width="360" height="12" fill="#FFB703"/>
+        <circle class="head" cx="320" cy="190" r="26" fill="#f1c9a5"/>
+        <rect x="290" y="214" width="60" height="30" fill="#fff"/>
+        <text x="320" y="300" text-anchor="middle" font-family="Bebas Neue" font-size="30" fill="#fff">NEWS DESK</text>
+      </svg>
+      <video id="anchor" src="./assets/anchor.mp4" autoplay muted loop playsinline></video>
+      <div class="scan"></div>
+      <div id="headline"><span class="tag">BREAKING</span><span id="hlText">WEAZEL NEWS LIVE — STANDING BY</span></div>
+      <div id="whale" class="ov"><b>WHALE ALERT / CASH DROP</b></div>
+      <div id="busted" class="ov"><b>BUSTED / JEET DETECTED</b></div>
+      <div id="bills"></div>
+      <div id="chopper">
+        <div class="ct">CHOPPER 4 CAM</div>
+        <div>PRICE <b id="stPrice">--</b></div>
+        <div>MCAP <b id="stMcap">--</b></div>
+        <div>24H VOL <b id="stVol">--</b></div>
+        <button id="chartBtn" class="btn small">CHART ▸</button>
+      </div>
+    </div>
+    <aside id="chartDrawer"><iframe id="chartFrame" title="DexScreener" loading="lazy"></iframe></aside>
+  </section>
+
+  <aside id="side">
+    <div class="card" id="wallet">
+      <h3>CITIZEN ID</h3>
+      <div id="walletState">NOT CONNECTED</div>
+      <div id="walletBtns">
+        <button id="connectBtn" class="btn red">CONNECT WALLET</button>
+        <button id="disconnectBtn" class="btn hide">DISCONNECT</button>
+      </div>
+      <div class="paste"><input id="pasteAddr" placeholder="Or paste 0x address"><button id="pasteBtn" class="btn small">GO</button></div>
+      <div id="status" class="hide"></div>
+      <div id="balance"></div>
+      <a id="buyBtn" class="btn yellow hide" target="_blank" rel="noopener">BUY ON ROBINHOOD CHAIN</a>
+      <button id="tweetBtn" class="btn hide">POST CITIZEN ID TO X</button>
+      <div id="tipBox" class="hide">
+        <h3>SEND NEWS TIP</h3>
+        <input id="tipInput" maxlength="120" placeholder="Your breaking news...">
+        <button id="tipBtn" class="btn red">PUSH TO TICKER</button>
+        <small id="tipMsg"></small>
+      </div>
+    </div>
+    <div class="card" id="fib"><h3>FIB MOST WANTED</h3><ol id="fibList"><li class="empty">No fugitives yet...</li></ol></div>
+  </aside>
+</main>
+
+<footer id="chyron"><div class="lbl">WEAZEL NEWS</div><div class="track"><div id="tickerInner"></div></div></footer>
+
+<script type="module" src="config.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
